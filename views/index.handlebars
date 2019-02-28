@@ -1,7 +1,10 @@
-<h1>Burgers!!</h1>
+<h1 class= "text-center">Burgers!!</h1>
 
-<h2>Burgers that are uneaten:</h2>
-<div id = "uneaten">
+
+<div class ="container">
+<div class ="row">
+<div class = "col-sm" id="burgercol">
+<h2 class =>Uneaten Burgers</h2>
 <ul>
   {{#each burgers}}
     {{#unless this.devoured}}
@@ -14,8 +17,11 @@
   {{/each}}
 </ul>
 </div>
-<div id = "eaten">
-<h2 >Burgers what done been et up:</h2>
+<div class = "text-center" "col-sm">
+  <img src="/assets/images/burger.png">
+</div>
+<div class = "col-sm" id="burgercol">
+<h2 class= >Eaten Burgers:</h2>
 <ul>
   {{#each burgers}}
     {{#if this.devoured}}
@@ -28,10 +34,14 @@
   {{/each}}
 </ul>
 </div>
+</div>
+</div>
+<div class="text-center">
+<h2 class="text-center">Add a burger</h2>
+<br>
 
-<h2>Add a burger</h2>
-<div class="col s12">
     <form action="/burgers" method="POST">
       <input type="text" id="name" name="burger_name" placeholder="Enter Burger Here">
       <button type="submit" class="addBurgerButton">Add The Burger</button>
     </form>
+    </div>
